@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        "my-element": "src/my-element.ts",
+        "carousel-element": "src/widgets/carousel-element.ts",
       },
       formats: ["es"],
     },

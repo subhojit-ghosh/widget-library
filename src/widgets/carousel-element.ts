@@ -27,9 +27,7 @@ export class CarouselElement extends LitElement {
   `;
 
   firstUpdated() {
-    const glide = new Glide(
-      this.shadowRoot?.querySelector(".glide") as HTMLElement
-    ).mount();
+    new Glide(this.shadowRoot?.querySelector(".glide") as HTMLElement).mount();
   }
 
   render() {
@@ -39,7 +37,9 @@ export class CarouselElement extends LitElement {
           <ul class="glide__slides">
             ${this.images.map(
               (image) =>
-                html`<li class="glide__slide"><img style="width:100%;height: 300px" src="${image}" /></li>`
+                html`<li class="glide__slide">
+                  <img style="width:100%;height: 300px" src="${image}" />
+                </li>`
             )}
           </ul>
         </div>

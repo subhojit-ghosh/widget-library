@@ -7,7 +7,9 @@ export default defineConfig({
       entry: {
         "carousel-element": "src/widgets/carousel-element.ts",
       },
-      formats: ["es"],
+      name: "[name]",
+      fileName: (fmt, name) => name + ".js",
+      formats: ["umd"],
     },
   },
 });
